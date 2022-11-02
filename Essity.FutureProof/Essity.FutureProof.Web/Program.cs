@@ -11,6 +11,9 @@ builder.Services.AddPooledDbContextFactory<DataContext>(options =>
 
 builder.Services.AddHttpClient();
 
+//builder.Services.AddInfraStructureServices();
+//builder.Services.AddPCHConnectorServices();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
