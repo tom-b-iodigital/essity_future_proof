@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
+﻿using System.Diagnostics;
 using System.Text.Json;
 using Essity.FutureProof.Connector.PCH.Config;
 using Essity.FutureProof.Connector.PCH.DDH;
@@ -36,8 +34,6 @@ namespace Essity.FutureProof.Connector.PCH.Services.Implementations
                 }
 
                 var result = Activator.CreateInstance<CommunicationResult<T>>();
-
-                //var response = await client.ExecuteAsync<List<DdhProduct>>(request, cancellationTokenSource.Token);
 
                 // https://fn-ddh-redis-prod.azurewebsites.net/api/RedisRead?brand=umbraco&tag=umbraco_bl_fr-be&key=edet_modified
                 var cancellationTokenSource = new CancellationTokenSource();
