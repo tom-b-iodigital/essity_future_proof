@@ -5,11 +5,11 @@ namespace Essity.FutureProof.Domain.Interfaces
 {
     public interface IDomainProduct
     {
-        string CountUsageCU { get; set; }
+        string? CountUsageCU { get; set; }
 
-        string CountUsageCP { get; set; }
+        string? CountUsageCP { get; set; }
 
-        string PackCount { get; set; }
+        string? PackCount { get; set; }
 
         ProductSimpleAttribute CottonBuds { get; set; }
 
@@ -49,33 +49,33 @@ namespace Essity.FutureProof.Domain.Interfaces
 
         ProductSimpleAttribute Scent { get; set; }
 
-        string SheetFormat { get; set; }
+        string? SheetFormat { get; set; }
 
-        string RetailFormat { get; set; }
+        string? RetailFormat { get; set; }
 
-        string Id { get; set; }
+        string? Id { get; set; }
 
-        string SelectedProductId { get; set; }
+        string? SelectedProductId { get; set; }
 
-        string ProductBaseCode { get; set; }
+        string? ProductBaseCode { get; set; }
 
-        string ProductName { get; set; }
+        string? ProductName { get; set; }
 
-        string ShortDescription { get; set; }
+        string? ShortDescription { get; set; }
 
-        string LongDescription { get; set; }
+        string? LongDescription { get; set; }
 
-        string Disclaimer { get; set; }
+        string? Disclaimer { get; set; }
 
-        string[] HighLights { get; set; }
+        string[]? HighLights { get; set; }
 
-        string BrandName { get; set; }
+        string? BrandName { get; set; }
 
         bool IsKeyProduct { get; set; }
 
-        string Layer { get; set; }
+        string? Layer { get; set; }
 
-        string Color { get; set; }
+        string? Color { get; set; }
 
         ProductSimpleAttribute Pattern { get; set; }
 
@@ -83,29 +83,29 @@ namespace Essity.FutureProof.Domain.Interfaces
 
         ProductSimpleAttribute Flushable { get; set; }
 
-        string MoistOrDry { get; set; }
+        string? MoistOrDry { get; set; }
 
         DomainProductStatus Status { get; set; }
 
-        List<string> CrossReferences { get; set; }
+        List<string>? CrossReferences { get; set; }
 
-        List<string> ScentVariants { get; set; }
+        List<string>? ScentVariants { get; set; }
 
-        string ThirdPartyLogo { get; set; }
+        string? ThirdPartyLogo { get; set; }
 
-        List<DomainProductAsset> Assets { get; set; }
+        List<DomainProductAsset>? Assets { get; set; }
 
-        string Ean { get; set; }
+        string? Ean { get; set; }
 
-        string MdrAddressManufacturer { get; set; }
+        string? MdrAddressManufacturer { get; set; }
 
-        string MdrAddressVisitor { get; set; }
+        string? MdrAddressVisitor { get; set; }
 
         bool MdrCertificate { get; set; }
 
-        string MdrMedicalDeviceLabel { get; set; }
+        string? MdrMedicalDeviceLabel { get; set; }
 
-        List<IDomainProduct> Children { get; set; }
+        List<IDomainProduct>? Children { get; set; }
 
         int GetCode();
     }

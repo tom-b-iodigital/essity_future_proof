@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business Layer", "Business 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Essity.FutureProof.Domain", "Essity.FutureProof.Domain\Essity.FutureProof.Domain.csproj", "{8BBEBFE5-8611-4ABB-854E-8EF4B9615B5F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Essity.FutureProof.Connector.PCH", "Essity.FutureProof.Connector.PCH\Essity.FutureProof.Connector.PCH.csproj", "{F5B3D671-B36C-48A7-8E63-D806CC769831}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{8BBEBFE5-8611-4ABB-854E-8EF4B9615B5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BBEBFE5-8611-4ABB-854E-8EF4B9615B5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BBEBFE5-8611-4ABB-854E-8EF4B9615B5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5B3D671-B36C-48A7-8E63-D806CC769831}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5B3D671-B36C-48A7-8E63-D806CC769831}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5B3D671-B36C-48A7-8E63-D806CC769831}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5B3D671-B36C-48A7-8E63-D806CC769831}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,6 +44,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{10B792E6-55E8-414D-9E89-D103603F24BE} = {C234333D-9A0E-45F1-82A5-8296ABD5537D}
 		{8BBEBFE5-8611-4ABB-854E-8EF4B9615B5F} = {8356EC61-475C-49AF-92D7-7676222277BC}
+		{F5B3D671-B36C-48A7-8E63-D806CC769831} = {C234333D-9A0E-45F1-82A5-8296ABD5537D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A3F4DA18-5A74-4052-9C0C-CC587202A0C8}

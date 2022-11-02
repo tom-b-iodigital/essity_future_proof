@@ -9,6 +9,8 @@ builder.Services.AddRazorPages();
 builder.Services.AddPooledDbContextFactory<DataContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("sqlserver")));
 
+builder.Services.AddHttpClient();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
