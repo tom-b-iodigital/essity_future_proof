@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Essity.FutureProof.Web", "Essity.FutureProof.Web\Essity.FutureProof.Web.csproj", "{87D37CFB-6259-4FB7-B09B-9E91ABEEA47D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data Layer", "Data Layer", "{C234333D-9A0E-45F1-82A5-8296ABD5537D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Essity.FutureProof.Infrastructure", "Essity.FutureProof.Infrastructure\Essity.FutureProof.Infrastructure.csproj", "{10B792E6-55E8-414D-9E89-D103603F24BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{87D37CFB-6259-4FB7-B09B-9E91ABEEA47D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87D37CFB-6259-4FB7-B09B-9E91ABEEA47D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87D37CFB-6259-4FB7-B09B-9E91ABEEA47D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87D37CFB-6259-4FB7-B09B-9E91ABEEA47D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10B792E6-55E8-414D-9E89-D103603F24BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10B792E6-55E8-414D-9E89-D103603F24BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10B792E6-55E8-414D-9E89-D103603F24BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10B792E6-55E8-414D-9E89-D103603F24BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{10B792E6-55E8-414D-9E89-D103603F24BE} = {C234333D-9A0E-45F1-82A5-8296ABD5537D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A3F4DA18-5A74-4052-9C0C-CC587202A0C8}
+	EndGlobalSection
+EndGlobal
