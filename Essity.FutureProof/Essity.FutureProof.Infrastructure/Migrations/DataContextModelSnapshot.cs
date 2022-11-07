@@ -360,7 +360,6 @@ namespace Essity.FutureProof.Infrastructure.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int?>("ConsumerId")
-                        .IsRequired()
                         .HasColumnType("int");
 
                     b.Property<DateTime>("DateCreated")
@@ -577,8 +576,7 @@ namespace Essity.FutureProof.Infrastructure.Migrations
                     b.HasOne("Essity.FutureProof.Infrastructure.Entities.UbConsumer", "Consumer")
                         .WithMany("UbEqualitySurveys")
                         .HasForeignKey("ConsumerId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("Consumer");
                 });

@@ -7,11 +7,6 @@ namespace Essity.FutureProof.Infrastructure.Entities
     /// </summary>
     public class UbEqualitySurvey
     {
-        public UbEqualitySurvey()
-        {
-            Consumer = new UbConsumer();
-        }
-
         /// <summary>
         /// Gets or sets the Id
         /// </summary>
@@ -58,6 +53,6 @@ namespace Essity.FutureProof.Infrastructure.Entities
         /// <summary>
         /// Gets or sets the UbConsumer
         /// </summary>
-        public virtual UbConsumer Consumer { get; set; }
+        public virtual UbConsumer? Consumer { get; set; }
     }
 }
