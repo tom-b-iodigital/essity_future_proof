@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Essity.FutureProof.Infrastructure.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20221031140221_InitialSetup")]
+    [Migration("20221107141148_InitialSetup")]
     partial class InitialSetup
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,7 +24,7 @@ namespace Essity.FutureProof.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("Essity.ConsumerTissue.Infrastructure.EF.UbComment", b =>
+            modelBuilder.Entity("Essity.FutureProof.Infrastructure.Entities.UbComment", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -57,7 +57,7 @@ namespace Essity.FutureProof.Infrastructure.Migrations
                     b.ToTable("UbComments");
                 });
 
-            modelBuilder.Entity("Essity.ConsumerTissue.Infrastructure.EF.UbConsent", b =>
+            modelBuilder.Entity("Essity.FutureProof.Infrastructure.Entities.UbConsent", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -96,7 +96,7 @@ namespace Essity.FutureProof.Infrastructure.Migrations
                     b.ToTable("UbConsents");
                 });
 
-            modelBuilder.Entity("Essity.ConsumerTissue.Infrastructure.EF.UbConsentType", b =>
+            modelBuilder.Entity("Essity.FutureProof.Infrastructure.Entities.UbConsentType", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -121,7 +121,7 @@ namespace Essity.FutureProof.Infrastructure.Migrations
                     b.ToTable("UbConsentTypes");
                 });
 
-            modelBuilder.Entity("Essity.ConsumerTissue.Infrastructure.EF.UbConsumer", b =>
+            modelBuilder.Entity("Essity.FutureProof.Infrastructure.Entities.UbConsumer", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -177,13 +177,13 @@ namespace Essity.FutureProof.Infrastructure.Migrations
                     b.ToTable("UbConsumers");
                 });
 
-            modelBuilder.Entity("Essity.ConsumerTissue.Infrastructure.EF.UbConsumerConsent", b =>
+            modelBuilder.Entity("Essity.FutureProof.Infrastructure.Entities.UbConsumerConsent", b =>
                 {
                     b.Property<int>("ConsumerId")
                         .HasColumnType("int")
                         .HasColumnOrder(0);
 
-                    b.Property<int?>("ConsentId")
+                    b.Property<int>("ConsentId")
                         .HasColumnType("int")
                         .HasColumnOrder(1);
 
@@ -212,7 +212,7 @@ namespace Essity.FutureProof.Infrastructure.Migrations
                     b.ToTable("UbConsumerConsents");
                 });
 
-            modelBuilder.Entity("Essity.ConsumerTissue.Infrastructure.EF.UbContact", b =>
+            modelBuilder.Entity("Essity.FutureProof.Infrastructure.Entities.UbContact", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -241,7 +241,7 @@ namespace Essity.FutureProof.Infrastructure.Migrations
                     b.ToTable("UbContacts");
                 });
 
-            modelBuilder.Entity("Essity.ConsumerTissue.Infrastructure.EF.UbContestCampaign", b =>
+            modelBuilder.Entity("Essity.FutureProof.Infrastructure.Entities.UbContestCampaign", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -263,7 +263,7 @@ namespace Essity.FutureProof.Infrastructure.Migrations
                     b.ToTable("UbContestCampaigns");
                 });
 
-            modelBuilder.Entity("Essity.ConsumerTissue.Infrastructure.EF.UbContestCode", b =>
+            modelBuilder.Entity("Essity.FutureProof.Infrastructure.Entities.UbContestCode", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -289,7 +289,7 @@ namespace Essity.FutureProof.Infrastructure.Migrations
                     b.ToTable("UbContestCodes");
                 });
 
-            modelBuilder.Entity("Essity.ConsumerTissue.Infrastructure.EF.UbContestSubmission", b =>
+            modelBuilder.Entity("Essity.FutureProof.Infrastructure.Entities.UbContestSubmission", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -322,7 +322,7 @@ namespace Essity.FutureProof.Infrastructure.Migrations
                     b.ToTable("UbContestSubmissions");
                 });
 
-            modelBuilder.Entity("Essity.ConsumerTissue.Infrastructure.EF.UbDataCleanupLog", b =>
+            modelBuilder.Entity("Essity.FutureProof.Infrastructure.Entities.UbDataCleanupLog", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -353,7 +353,7 @@ namespace Essity.FutureProof.Infrastructure.Migrations
                     b.ToTable("UbDataCleanupLogs");
                 });
 
-            modelBuilder.Entity("Essity.ConsumerTissue.Infrastructure.EF.UbEqualitySurvey", b =>
+            modelBuilder.Entity("Essity.FutureProof.Infrastructure.Entities.UbEqualitySurvey", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -362,6 +362,7 @@ namespace Essity.FutureProof.Infrastructure.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int?>("ConsumerId")
+                        .IsRequired()
                         .HasColumnType("int");
 
                     b.Property<DateTime>("DateCreated")
@@ -393,7 +394,7 @@ namespace Essity.FutureProof.Infrastructure.Migrations
                     b.ToTable("UbEqualitySurveys");
                 });
 
-            modelBuilder.Entity("Essity.ConsumerTissue.Infrastructure.EF.UbProductTracking", b =>
+            modelBuilder.Entity("Essity.FutureProof.Infrastructure.Entities.UbProductTracking", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -415,7 +416,7 @@ namespace Essity.FutureProof.Infrastructure.Migrations
                     b.ToTable("UbProductTrackings");
                 });
 
-            modelBuilder.Entity("Essity.ConsumerTissue.Infrastructure.EF.UbReview", b =>
+            modelBuilder.Entity("Essity.FutureProof.Infrastructure.Entities.UbReview", b =>
                 {
                     b.Property<int>("ReviewId")
                         .ValueGeneratedOnAdd()
@@ -460,7 +461,7 @@ namespace Essity.FutureProof.Infrastructure.Migrations
                     b.ToTable("UbReviews");
                 });
 
-            modelBuilder.Entity("Essity.ConsumerTissue.Infrastructure.EF.UbWebLike", b =>
+            modelBuilder.Entity("Essity.FutureProof.Infrastructure.Entities.UbWebLike", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -486,7 +487,7 @@ namespace Essity.FutureProof.Infrastructure.Migrations
                     b.ToTable("UbWebLikes");
                 });
 
-            modelBuilder.Entity("Essity.ConsumerTissue.Infrastructure.EF.UbWordBlacklist", b =>
+            modelBuilder.Entity("Essity.FutureProof.Infrastructure.Entities.UbWordBlacklist", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -502,9 +503,9 @@ namespace Essity.FutureProof.Infrastructure.Migrations
                     b.ToTable("UbWordBlacklists");
                 });
 
-            modelBuilder.Entity("Essity.ConsumerTissue.Infrastructure.EF.UbConsent", b =>
+            modelBuilder.Entity("Essity.FutureProof.Infrastructure.Entities.UbConsent", b =>
                 {
-                    b.HasOne("Essity.ConsumerTissue.Infrastructure.EF.UbConsentType", "UbConsentType")
+                    b.HasOne("Essity.FutureProof.Infrastructure.Entities.UbConsentType", "UbConsentType")
                         .WithMany("UbConsents")
                         .HasForeignKey("TypeId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -513,15 +514,15 @@ namespace Essity.FutureProof.Infrastructure.Migrations
                     b.Navigation("UbConsentType");
                 });
 
-            modelBuilder.Entity("Essity.ConsumerTissue.Infrastructure.EF.UbConsumerConsent", b =>
+            modelBuilder.Entity("Essity.FutureProof.Infrastructure.Entities.UbConsumerConsent", b =>
                 {
-                    b.HasOne("Essity.ConsumerTissue.Infrastructure.EF.UbConsent", "UbConsent")
+                    b.HasOne("Essity.FutureProof.Infrastructure.Entities.UbConsent", "UbConsent")
                         .WithMany("UbConsumerConsents")
                         .HasForeignKey("ConsentId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("Essity.ConsumerTissue.Infrastructure.EF.UbConsumer", "UbConsumer")
+                    b.HasOne("Essity.FutureProof.Infrastructure.Entities.UbConsumer", "UbConsumer")
                         .WithMany("UbConsumerConsents")
                         .HasForeignKey("ConsumerId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -532,9 +533,9 @@ namespace Essity.FutureProof.Infrastructure.Migrations
                     b.Navigation("UbConsumer");
                 });
 
-            modelBuilder.Entity("Essity.ConsumerTissue.Infrastructure.EF.UbContact", b =>
+            modelBuilder.Entity("Essity.FutureProof.Infrastructure.Entities.UbContact", b =>
                 {
-                    b.HasOne("Essity.ConsumerTissue.Infrastructure.EF.UbConsumer", "UbConsumer")
+                    b.HasOne("Essity.FutureProof.Infrastructure.Entities.UbConsumer", "UbConsumer")
                         .WithMany("UbContacts")
                         .HasForeignKey("ConsumerId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -543,9 +544,9 @@ namespace Essity.FutureProof.Infrastructure.Migrations
                     b.Navigation("UbConsumer");
                 });
 
-            modelBuilder.Entity("Essity.ConsumerTissue.Infrastructure.EF.UbContestCode", b =>
+            modelBuilder.Entity("Essity.FutureProof.Infrastructure.Entities.UbContestCode", b =>
                 {
-                    b.HasOne("Essity.ConsumerTissue.Infrastructure.EF.UbContestCampaign", "UbContestCampaign")
+                    b.HasOne("Essity.FutureProof.Infrastructure.Entities.UbContestCampaign", "UbContestCampaign")
                         .WithMany("UbContestCodes")
                         .HasForeignKey("CampaignId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -554,15 +555,15 @@ namespace Essity.FutureProof.Infrastructure.Migrations
                     b.Navigation("UbContestCampaign");
                 });
 
-            modelBuilder.Entity("Essity.ConsumerTissue.Infrastructure.EF.UbContestSubmission", b =>
+            modelBuilder.Entity("Essity.FutureProof.Infrastructure.Entities.UbContestSubmission", b =>
                 {
-                    b.HasOne("Essity.ConsumerTissue.Infrastructure.EF.UbContestCampaign", "UbContestCampaign")
+                    b.HasOne("Essity.FutureProof.Infrastructure.Entities.UbContestCampaign", "UbContestCampaign")
                         .WithMany("UbContestSubmissions")
                         .HasForeignKey("CampaignId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Essity.ConsumerTissue.Infrastructure.EF.UbConsumer", "UbConsumer")
+                    b.HasOne("Essity.FutureProof.Infrastructure.Entities.UbConsumer", "UbConsumer")
                         .WithMany("UbContestSubmissions")
                         .HasForeignKey("ConsumerId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -573,19 +574,20 @@ namespace Essity.FutureProof.Infrastructure.Migrations
                     b.Navigation("UbContestCampaign");
                 });
 
-            modelBuilder.Entity("Essity.ConsumerTissue.Infrastructure.EF.UbEqualitySurvey", b =>
+            modelBuilder.Entity("Essity.FutureProof.Infrastructure.Entities.UbEqualitySurvey", b =>
                 {
-                    b.HasOne("Essity.ConsumerTissue.Infrastructure.EF.UbConsumer", "Consumer")
+                    b.HasOne("Essity.FutureProof.Infrastructure.Entities.UbConsumer", "Consumer")
                         .WithMany("UbEqualitySurveys")
                         .HasForeignKey("ConsumerId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
                     b.Navigation("Consumer");
                 });
 
-            modelBuilder.Entity("Essity.ConsumerTissue.Infrastructure.EF.UbReview", b =>
+            modelBuilder.Entity("Essity.FutureProof.Infrastructure.Entities.UbReview", b =>
                 {
-                    b.HasOne("Essity.ConsumerTissue.Infrastructure.EF.UbConsumer", "UbConsumer")
+                    b.HasOne("Essity.FutureProof.Infrastructure.Entities.UbConsumer", "UbConsumer")
                         .WithMany("UbReviews")
                         .HasForeignKey("ConsumerId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -594,17 +596,17 @@ namespace Essity.FutureProof.Infrastructure.Migrations
                     b.Navigation("UbConsumer");
                 });
 
-            modelBuilder.Entity("Essity.ConsumerTissue.Infrastructure.EF.UbConsent", b =>
+            modelBuilder.Entity("Essity.FutureProof.Infrastructure.Entities.UbConsent", b =>
                 {
                     b.Navigation("UbConsumerConsents");
                 });
 
-            modelBuilder.Entity("Essity.ConsumerTissue.Infrastructure.EF.UbConsentType", b =>
+            modelBuilder.Entity("Essity.FutureProof.Infrastructure.Entities.UbConsentType", b =>
                 {
                     b.Navigation("UbConsents");
                 });
 
-            modelBuilder.Entity("Essity.ConsumerTissue.Infrastructure.EF.UbConsumer", b =>
+            modelBuilder.Entity("Essity.FutureProof.Infrastructure.Entities.UbConsumer", b =>
                 {
                     b.Navigation("UbConsumerConsents");
 
@@ -617,7 +619,7 @@ namespace Essity.FutureProof.Infrastructure.Migrations
                     b.Navigation("UbReviews");
                 });
 
-            modelBuilder.Entity("Essity.ConsumerTissue.Infrastructure.EF.UbContestCampaign", b =>
+            modelBuilder.Entity("Essity.FutureProof.Infrastructure.Entities.UbContestCampaign", b =>
                 {
                     b.Navigation("UbContestCodes");
 
