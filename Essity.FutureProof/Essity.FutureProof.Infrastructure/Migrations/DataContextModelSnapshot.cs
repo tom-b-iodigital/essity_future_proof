@@ -172,6 +172,8 @@ namespace Essity.FutureProof.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Email");
+
                     b.ToTable("UbConsumers");
                 });
 
@@ -206,6 +208,10 @@ namespace Essity.FutureProof.Infrastructure.Migrations
                     b.HasKey("ConsumerId", "ConsentId");
 
                     b.HasIndex("ConsentId");
+
+                    b.HasIndex("ConsumerId");
+
+                    b.HasIndex("OptInConfirmed");
 
                     b.ToTable("UbConsumerConsents");
                 });
@@ -283,6 +289,8 @@ namespace Essity.FutureProof.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CampaignId");
+
+                    b.HasIndex("CampaignId", "ActionCode");
 
                     b.ToTable("UbContestCodes");
                 });

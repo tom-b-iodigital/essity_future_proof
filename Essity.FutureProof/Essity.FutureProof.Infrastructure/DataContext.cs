@@ -165,6 +165,18 @@ namespace Essity.FutureProof.Infrastructure
 
             modelBuilder.Entity<UbConsumerConsent>()
                 .HasKey(cc => new { cc.ConsumerId, cc.ConsentId });
+
+            modelBuilder.Entity<UbConsumerConsent>()
+                .HasIndex(c => c.ConsumerId);
+
+            modelBuilder.Entity<UbConsumerConsent>()
+                .HasIndex(c => c.OptInConfirmed);
+
+            modelBuilder.Entity<UbConsumer>()
+                .HasIndex(e => e.Email);
+
+            modelBuilder.Entity<UbContestCode>()
+                .HasIndex(c => new { c.CampaignId, c.ActionCode });
         }
 
         public async Task<int?> GetCmsPropertyDataIdAsync(int? contentTypeId = null, int? contentNodeId = null)

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -328,6 +329,21 @@ namespace Essity.FutureProof.Infrastructure.Migrations
             //    column: "ConsentId");
 
             //migrationBuilder.CreateIndex(
+            //    name: "IX_UbConsumerConsents_ConsumerId",
+            //    table: "UbConsumerConsents",
+            //    column: "ConsumerId");
+
+            //migrationBuilder.CreateIndex(
+            //    name: "IX_UbConsumerConsents_OptInConfirmed",
+            //    table: "UbConsumerConsents",
+            //    column: "OptInConfirmed");
+
+            //migrationBuilder.CreateIndex(
+            //    name: "IX_UbConsumers_Email",
+            //    table: "UbConsumers",
+            //    column: "Email");
+
+            //migrationBuilder.CreateIndex(
             //    name: "IX_UbContacts_ConsumerId",
             //    table: "UbContacts",
             //    column: "ConsumerId");
@@ -336,6 +352,11 @@ namespace Essity.FutureProof.Infrastructure.Migrations
             //    name: "IX_UbContestCodes_CampaignId",
             //    table: "UbContestCodes",
             //    column: "CampaignId");
+
+            //migrationBuilder.CreateIndex(
+            //    name: "IX_UbContestCodes_CampaignId_ActionCode",
+            //    table: "UbContestCodes",
+            //    columns: new[] { "CampaignId", "ActionCode" });
 
             //migrationBuilder.CreateIndex(
             //    name: "IX_UbContestSubmissions_CampaignId",

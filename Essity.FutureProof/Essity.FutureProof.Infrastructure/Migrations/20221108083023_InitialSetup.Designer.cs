@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Essity.FutureProof.Infrastructure.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20221108071407_InitialSetup")]
+    [Migration("20221108083023_InitialSetup")]
     partial class InitialSetup
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -174,6 +174,8 @@ namespace Essity.FutureProof.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Email");
+
                     b.ToTable("UbConsumers");
                 });
 
@@ -208,6 +210,10 @@ namespace Essity.FutureProof.Infrastructure.Migrations
                     b.HasKey("ConsumerId", "ConsentId");
 
                     b.HasIndex("ConsentId");
+
+                    b.HasIndex("ConsumerId");
+
+                    b.HasIndex("OptInConfirmed");
 
                     b.ToTable("UbConsumerConsents");
                 });
@@ -285,6 +291,8 @@ namespace Essity.FutureProof.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CampaignId");
+
+                    b.HasIndex("CampaignId", "ActionCode");
 
                     b.ToTable("UbContestCodes");
                 });
