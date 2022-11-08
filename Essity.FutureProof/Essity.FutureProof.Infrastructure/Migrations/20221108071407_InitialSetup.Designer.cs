@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Essity.FutureProof.Infrastructure.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20221107144843_InitialSetup")]
+    [Migration("20221108071407_InitialSetup")]
     partial class InitialSetup
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
